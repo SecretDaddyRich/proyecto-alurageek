@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProyectoAluraGeek</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Item's by (R)ich</h1>
+        <p id="contactoMensaje" class="mensaje-contacto"></p> <!-- Contenedor para el mensaje -->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#productos">Productos Disponibles</a></li>
+            <li><a href="#nuevoProductoForm">Agregar Producto</a></li>
+            <li><a href="#Contacto" id="contactoLink">Contacto</a></li> <!-- Agregar un id -->
+        </ul>
+    </nav>
+    <main>
+        <section class="productos-list" id="productos">
+            <h1>Productos Disponibles</h1>
+            <p id="no-productos">No hay inventario disponible en este momento.</p>
+            <div class="productos-grid" id="productos-grid"></div>
+        </section>
+        <aside class="nuevo-producto">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="nuevoProductoForm">
+                <input type="text" id="nombre" placeholder="Nombre del producto" required />
+                <input type="number" id="precio" placeholder="Precio" required />
+                <input type="text" id="imagenUrl" placeholder="URL de la imagen" required />
+                <button type="submit">Agregar Producto</button>
+                <button type="button" id="borrarCampos">Borrar</button>
+            </form>
+        </aside>
+    </main>
+    <footer>
+        <p>Desarrollado por Ricardo Romero. Sígueme en:</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/hector-ricardo-romero-reza-4b3ab117a/" target="_blank"><img src="./imagenes/linkedin.png" alt="linkedin"></a>
+            <a href="https://github.com/SecretDaddyRich" target="_blank"><img src="./imagenes/github.png" alt="github"></a>
+            <a href="https://www.instagram.com/conde.rich/?next=%2F" target="_blank"><img src="./imagenes/insta.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

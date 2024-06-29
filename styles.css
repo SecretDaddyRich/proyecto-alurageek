@@ -1,0 +1,282 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #666;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.productos-list {
+    flex: 1 1 65%;
+    padding: 0 10px;
+}
+
+.productos-list h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+#no-productos {
+    text-align: center;
+    font-size: 1.2em;
+    color: gray;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+.productos-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    background-color: #282828;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 200px; /* Altura fija para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-container--info {
+    padding: 10px 0;
+}
+
+.card-container--info p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #ffff;
+}
+
+.card-container--value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-container--value p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #036916;
+}
+
+.card-container--value img {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.card-container--value img:hover {
+    transform: scale(1.1);
+}
+
+.nuevo-producto {
+    flex: 1 1 30%;
+    padding: 20px;
+    background-color: #282828;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+    height: fit-content;
+}
+
+.nuevo-producto h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+form input,
+form button {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #1c86ee;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#borrarCampos {
+    background-color: #ff4040;
+}
+
+#borrarCampos:hover {
+    background-color: #ff3030;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: #e0e0e0;
+    border-top: 1px solid #444;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos-list, .nuevo-producto {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    form button, #borrarCampos {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mensaje-contacto {
+    display: none;
+    color: #fff;
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
+}
